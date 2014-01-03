@@ -1,0 +1,19 @@
+!!!
+%html
+	%head
+		%title Learn About You
+		= stylesheet_link_tag    "application", :media => "all"
+		= javascript_include_tag "application"
+		= csrf_meta_tags
+		%body
+			= render "/layouts/navigation"
+			.container
+				= yield
+			.container
+				.row
+					.span9.centred#love
+			- if flash[:notice]
+				.notice=flash[:notice]
+
+
+    

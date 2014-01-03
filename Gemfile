@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+gem 'html5_validators'
 # Use postgresql as the database for Active Record
 gem 'pg'
 gem 'bootstrap-sass-rails'
@@ -12,7 +13,6 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'haml-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
@@ -37,6 +37,7 @@ group :test, :development do
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'selenium-webdriver'
   gem 'annotate'
   gem 'better_errors'
   gem 'binding_of_caller'

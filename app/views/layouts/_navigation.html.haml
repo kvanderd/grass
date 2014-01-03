@@ -1,0 +1,25 @@
+%nav.navbar.navbar-default{role: "navigation"}
+  / Brand and toggle get grouped for better mobile display
+  .navbar-header
+    %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", type: "button"}
+      %span.sr-only Toggle navigation
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    .navbar-brand= link_to image_tag("grass_logo.png"), root_path
+  / Collect the nav links, forms, and other content for toggling
+  #bs-example-navbar-collapse-1.collapse.navbar-collapse
+    %ul.nav.navbar-nav.pull-right
+      %li=link_to "About", about_path
+      - if current_user
+        %li=link_to "Profile", user_path(@current_user)
+        %li=link_to 'Logout', session_path(current_user), :method => :delete
+      - else
+        %li=link_to "Create Account", new_user_path, id: "new_user", remote: true
+/ # =link_to "Login", new_user_path, id: "new_user", remote: true
+      
+
+
+        
+
+

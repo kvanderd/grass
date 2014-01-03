@@ -1,4 +1,10 @@
 Grass::Application.routes.draw do
+  resources :users, only: [:new, :create, :show]
+  resources :sessions, only: [:destroy]
+  get :home, :to => "users#home"
+  get :about, :to => "users#about"
+  root 'users#home'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
