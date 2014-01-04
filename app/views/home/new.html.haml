@@ -1,10 +1,15 @@
+
 .row.text-center.col-xs-12#intro
-	%h3 Watch Your Data Grow
-	%p Let's start with your first name...
+	%h3#main_page_header Watch Your Data Grow
+	%p#intro Let's start with your first name...
 .row
 
-/ %br
-/ .row.text-center.col-xs-12
+%br
+.row.text-center.col-xs-12
+	= render "names/new_name_form"
+
+.row.text-center.col-xs-12
+	
 
 / 	%p Data Powered By:
 / 	=link_to " Wolfram Alpha  &", "http://www.wolframalpha.com/about.html" 
@@ -14,5 +19,7 @@
 / 	/ #object.pullUp
 / .row.col-xs-12
 
+.row.col-xs-12
+	#object.pullUp
 
 = render "layouts/footer"

@@ -1,17 +1,20 @@
 !!!
 %html
 	%head
-		%title Learn About You
+		%title grass.io - Watch Your Data Grow
 		= stylesheet_link_tag    "application", :media => "all"
 		= javascript_include_tag "application"
 		= csrf_meta_tags
 		%body
 			= render "/layouts/navigation"
 			.container
+				#ajax_loader 
+					%h3 Please wait while we water the grass...
+			#wrapper
 				= yield
 			.container
 				.row
-					.span9.centred#love
+					.span9.centred
 			- if flash[:notice]
 				.notice=flash[:notice]
 

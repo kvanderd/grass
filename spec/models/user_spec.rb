@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  username        :string(255)      not null
+#  email           :string(255)      not null
+#  password_digest :string(255)
+#
+
 require 'spec_helper'
 # describe "Users" do
 	describe "my test", :js => true do

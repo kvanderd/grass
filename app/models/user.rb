@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  username        :string(255)      not null
+#  email           :string(255)      not null
+#  password_digest :string(255)
+#
+
 class User < ActiveRecord::Base
 	include ActiveModel::Validations
   validates_presence_of :username
@@ -7,4 +17,5 @@ class User < ActiveRecord::Base
   validates_presence_of :password
   validates_length_of :password, :minimum => 8, :maximum => 25
   has_secure_password
+  belongs_to :name
 end
