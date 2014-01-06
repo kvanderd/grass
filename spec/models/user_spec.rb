@@ -6,6 +6,7 @@
 #  username        :string(255)      not null
 #  email           :string(255)      not null
 #  password_digest :string(255)
+#  name_id         :integer
 #
 
 require 'spec_helper'

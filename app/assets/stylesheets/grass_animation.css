@@ -71,3 +71,12 @@
 	margin-top: 5%;
 	background: url('/assets/plantgrow.jpg')no-repeat center;
 }
+
+#object2 {
+	display: block;
+	width: 476px;
+	height: 252px;
+	float: left;
+	margin-top: 5%;
+	background: url('/assets/plantgrowleft.jpg')no-repeat center;
+}

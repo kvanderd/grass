@@ -7,16 +7,18 @@
 		= csrf_meta_tags
 		%body
 			= render "/layouts/navigation"
-			.container
-				#ajax_loader 
-					%h3 Please wait while we water the grass...
-			#wrapper
+			= render "/layouts/messages"
+			/ #user_form
+			#ajax_loader
+				%h3 Please wait while we gather your data...
+			#wrapper.container
 				= yield
-			.container
-				.row
-					.span9.centred
-			- if flash[:notice]
-				.notice=flash[:notice]
+			/ .container
+			/ 	.row
+			/ 		.span9.centred
+			/ - if flash[:notice]
+			/ 	.notice=flash[:notice]
+			= render "layouts/footer"
 
 
     

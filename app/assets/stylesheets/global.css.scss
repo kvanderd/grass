@@ -7,6 +7,11 @@ footer p {margin-left: 4em;}
 #ajax_loader {
 	display: none;
 	height: 25em;
-	background: url('/assets/cloud.GIF')no-repeat center;
+	background: url('/assets/textris.GIF')no-repeat center;
 	text-align: center;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
 }

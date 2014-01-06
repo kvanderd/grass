@@ -17,13 +17,26 @@ ActiveRecord::Schema.define(version: 20140103194352) do
   enable_extension "plpgsql"
 
   create_table "names", force: true do |t|
-    t.string "name"
+    t.string "first_name"
+    t.string "historical_percent"
+    t.string "historical_ratio"
+    t.string "historical_rank"
+    t.text   "interpretation"
+    t.text   "alive_today"
+    t.text   "most_common_age"
+    t.text   "births_yearly"
+    t.string "birth_ratios"
+    t.string "birth_precentages"
+    t.text   "etymology"
+    t.text   "alternative_versions"
+    t.text   "notable_people"
   end
 
   create_table "users", force: true do |t|
-    t.string "username",        null: false
-    t.string "email",           null: false
-    t.string "password_digest"
+    t.string  "username",        null: false
+    t.string  "email",           null: false
+    t.string  "password_digest"
+    t.integer "name_id"
   end
 
 end

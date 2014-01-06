@@ -1,4 +1,5 @@
 .col-xs-12.text-center
-	=form_for @name, remote: true do |t|
-		=t.text_field :name, placeholder: "Your First Name"
+	=form_for @name do |t|
+		=render "shared/error_messages", :target => @name
+		=t.text_field :first_name, placeholder: "Your First Name ..."
 		=t.submit "Grow", class: " btn btn-primary", id: "get_name"

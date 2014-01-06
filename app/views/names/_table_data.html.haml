@@ -1,0 +1,50 @@
+.grid_12
+	%h1.text-center Discover Your Name
+	%table.flat-table
+		%thead
+			%tr 
+				%th Interpretation
+				%th Etymology
+				%tr
+					%td= @name.interpretation
+					%td= @name.etymology
+	%table.flat-table
+		%thead
+			%tr 
+				%th Nicknames
+				%tr
+					%td= @name.alternative_versions
+	%h3.text-center Historical Population Data United States
+	%table.flat-table
+		%thead
+			%tr 
+				%th Ratio
+				%th Rank
+				%th Alive Population % 
+				%th Most Common Age
+				%tr.text-center
+					%td= "#{@name.historical_ratio} people are named #{@name.first_name}"
+					%td= "#{@name.historical_rank} most common name"
+					%td= "#{@name.historical_percent} named #{@name.first_name}"
+					%td= "#{@name.most_common_age} years old"
+	%h3.text-center Birth Data 2012 -United States
+	%table.flat-table
+		%thead
+			%tr 
+				%th Ratio
+				%th Birth Percentage
+				%th Total Named in 2012
+				%tr.text-center
+					%td= "#{@name.birth_ratios} born in 2012 were named #{@name.first_name}"
+					%td= @name.birth_precentages
+					%td= "#{@name.births_yearly} people were named #{@name.first_name}"
+
+
+	%h3.text-center Well Known People with Your Name (Global)
+	%table.flat-table
+		%thead
+			%tr 
+				%th Notable People
+				%tr.text-center
+					%td= @name.notable_people
+						

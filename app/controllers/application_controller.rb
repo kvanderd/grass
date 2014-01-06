@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 	 # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
+  # For APIs, you may want to use :null_session instead.  
 
 	protect_from_forgery with: :exception
 
@@ -17,4 +17,12 @@ class ApplicationController < ActionController::Base
   end
 
 	  helper_method :current_user
+    helper :formatting
+
+  private 
+
+    def render_404
+      render :template => 'error_pages/404', :layout => false, :status => :not_found
+    end
+
 end

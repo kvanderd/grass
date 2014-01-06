@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-gem 'html5_validators'
+# gem 'html5_validators'
 # Use postgresql as the database for Active Record
 gem 'pg'
 gem 'bootstrap-sass-rails'
@@ -15,6 +15,7 @@ gem 'haml-rails'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
+gem 'wolfram'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -39,10 +40,11 @@ group :test, :development do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'annotate'
-  gem 'better_errors'
+  # gem 'better_errors'
   gem 'binding_of_caller'
   gem 'awesome_print'
   gem 'factory_girl_rails'
+  gem 'debugger'
 end
 
 # Use ActiveModel has_secure_password
