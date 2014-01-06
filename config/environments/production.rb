@@ -77,4 +77,5 @@ Grass::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  Wolfram.appid = "X2G2PU-W6T4RQHWXT"
 end
