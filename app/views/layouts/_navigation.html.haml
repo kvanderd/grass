@@ -15,7 +15,7 @@
         %li=link_to "Profile", user_path(@current_user)
         %li=link_to 'Logout', session_path(current_user), :method => :delete
       - else
-        %li=link_to "Create Account", new_user_path, id: "new_user", remote: true
+        / %li=link_to "Create Account", new_user_path, id: "new_user", remote: true
 / # =link_to "Login", new_user_path, id: "new_user", remote: true
       
 
