@@ -10,7 +10,6 @@ require "call"
 		name = Name.where(first_name: given_name).pop
 	  if name == nil 
 	    name_raw = ::Call.new.call_api(given_name)
-	    ap name_raw
 	    name = Name.new(name_params)
 	    name.format_name(given_name, name_raw)
 	    name.save!
