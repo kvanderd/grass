@@ -52,8 +52,6 @@ class Name < ActiveRecord::Base
 
 
 	def historical_percents(api_value)
-		ap api_value
-		#you need to create an attribute in the name for this.
 		self.historical_percent = api_value.scan(/.\d+%/).pop  #18%
 	end
 
@@ -64,11 +62,6 @@ class Name < ActiveRecord::Base
 	def historical_ranks(api_value)
 		self.historical_rank = api_value.scan(/\d+th/).pop 
 	end
-
-	# def alive_today(api_value)
-	# 	# the goal of this is to get this value expected total number alive today | 466050 
-	# 	# \d+ (?=people) - grabs two matches instead of one.
-	# end
 
 	def most_common_ages(api_value)
 		self.most_common_age = api_value.scan(/\d+ (?=years)/).pop
