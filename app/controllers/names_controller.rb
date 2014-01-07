@@ -23,7 +23,6 @@ require "call"
 	end
 
 	def state_data
-		ap params
 		name = params[:state][:name]
 		name.capitalize!
 		@state = State.where(name: name).pop
