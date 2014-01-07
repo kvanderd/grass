@@ -1,6 +1,7 @@
 Grass::Application.routes.draw do
   resources :users, only: [:new, :create, :show]
   resources :names
+  get :state_data, :to => "names#state_data"
   resources :home, only: [:new]
   resources :sessions, only: [:destroy]
   get :about, :to => "home#about"

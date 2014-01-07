@@ -1,0 +1,46 @@
+$("#state_data_form").hide() 
+$('#state_table').append("<%= j render(partial: 'names/state_table', object: @state) %>");
+// $("#test").text("<%= j @state.name %>")
+var capitalIncome = '<%= @state.per_capita_income %>';
+
+$(function () {
+  $('#test').highcharts({
+      chart: {
+          type: 'column'
+      },
+      title: {
+          text: 'Per Capital Personal Income for ' + '<%= j @state.name %>' + ' Compared to National Average'
+      },
+      subtitle: {
+          text: 'Source: 2012 US Government Data'
+      },
+      xAxis: {
+         categories: [
+	         '2012'
+         ]
+      },
+      yAxis: {
+          title: {
+              text: 'Per Capital Personal Income'
+          }
+      },
+       tooltip: {
+	        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+	        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+	            '<td style="padding:0"><b>${point.y:.0f} dollar</b></td></tr>',
+	        footerFormat: '</table>',
+	        shared: true,
+	        useHTML: true
+      },
+      series: [{
+          name: 'United Sates',
+          data: [42693]
+
+      }, {
+          name: '<%= j @state.name %>',
+          data: [Number(capitalIncome)]
+
+      }]
+  });
+});
+

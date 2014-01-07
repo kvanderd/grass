@@ -1,0 +1,14 @@
+.grid_12
+	%h1.text-center Discover Your State
+	%table.flat-table
+		%thead
+			%tr.text-center
+				%th Name
+				%th Abbreviation
+				%th Per Capital Income
+				%th Percent w/ College Degree
+				%tr.text-center
+					%td= @state.name
+					%td= @state.abbreviation
+					%td= number_to_currency(@state.per_capita_income)
+					%td= "#{@state.percent_college_degree} %"

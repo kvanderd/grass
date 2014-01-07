@@ -1,0 +1,4 @@
+.col-xs-12.text-center
+	= form_for :state, method: :get, url: state_data_path, remote: true do |t|
+		= t.text_field :name
+		= t.submit "Grow", class: "btn btn-primary" 

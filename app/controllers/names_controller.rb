@@ -22,6 +22,16 @@ require "call"
 		@name = Name.find(params[:id])
 	end
 
+	def state_data
+		ap params
+		name = params[:state][:name]
+		name.capitalize!
+		@state = State.where(name: name).pop
+    respond_to do |format|
+      format.js
+    end 
+	end
+
 
 		private
 
