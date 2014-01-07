@@ -2,6 +2,9 @@ $("#state_data_form").hide()
 $('#state_table').append("<%= j render(partial: 'names/state_table', object: @state) %>");
 // $("#test").text("<%= j @state.name %>")
 var capitalIncome = '<%= @state.per_capita_income %>';
+Highcharts.setOptions({
+   colors: ['#50B432', '#00FF00']
+  });
 
 $(function () {
   $('#test').highcharts({
@@ -16,7 +19,7 @@ $(function () {
       },
       xAxis: {
          categories: [
-	         '2012'
+	         'Data From 2012'
          ]
       },
       yAxis: {
