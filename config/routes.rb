@@ -3,7 +3,7 @@ Grass::Application.routes.draw do
   resources :names
   get :state_data, :to => "names#state_data"
   resources :home, only: [:new]
-  resources :sessions, only: [:destroy]
+  resources :sessions, only: [:destroy, :new, :create]
   get :about, :to => "home#about"
   root 'home#new'
   

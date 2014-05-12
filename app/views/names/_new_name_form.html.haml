@@ -1,5 +1,5 @@
 .col-xs-12.text-center
 	=form_for @name do |t|
 		=render "shared/error_messages", :target => @name
-		=t.text_field :first_name, placeholder: "Your First Name ..."
+		=t.text_field :first_name, placeholder: "Your First Name..", :autofocus => true, id: "name_field", required: true
 		=t.submit "Grow", class: " btn btn-primary", id: "get_name"

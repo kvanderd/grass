@@ -7,7 +7,7 @@ gem 'rails', '4.0.0'
 
 # gem 'html5_validators'
 # Use postgresql as the database for Active Record
-gem 'pg'
+ gem 'pg', '0.14.1'
 gem 'bootstrap-sass-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -46,6 +46,8 @@ group :test, :development do
   gem 'binding_of_caller'
   gem 'awesome_print'
   gem 'factory_girl_rails'
+  #show test coverage percentage
+  gem 'simplecov'
   gem 'debugger'
 end
 

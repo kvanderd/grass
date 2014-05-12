@@ -6,19 +6,15 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.new(user_params)
-		respond_to do |format|
-			if @user.save
-				login @user
-				format.html { redirect_to(root_path, :notice => 'User was successfully created.') }
-			else
-				# @user = User.new
-				format.html { render :action => "create" }
+			if @user.save!
+				login(@user)
 			end
-		end
+			redirect_to user_path(@user.id)
 	end
 
 	def show
 		@user = User.find(params[:id])
+		@name = Name.find(@user.name_id)
 	end
 
 
@@ -26,7 +22,7 @@ class UsersController < ApplicationController
 	private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation)
+    params.require(:user).permit(:username, :email, :password, :password_confirmation, :name_id)
   end
 
 end

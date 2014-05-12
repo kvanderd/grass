@@ -1,8 +1,6 @@
 class NamesController < ApplicationController
 require "call"
 
-  def new
-	end
 
 	def create
 		given_name = params[:name][:first_name]
@@ -20,6 +18,10 @@ require "call"
 
 	def show
 		@name = Name.find(params[:id])
+		if @name.interpretation == nil
+			flash[:notice] = "We have no data for that name, please try a different name"
+			render :template => "home/new"
+		end
 	end
 
 	def state_data

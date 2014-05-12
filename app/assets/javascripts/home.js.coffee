@@ -1,6 +1,10 @@
 $ ->
-	$("#name_first_name").focus()
+	# $("#name_first_name").focus()
 	$("#get_name").click ->
+		# name = $.trim($('#name_first_name').val());
+		# if name  == '' 
+		# 	$("#errors").append("<h2>can't be blank<h2>")
+		# else
 		$("#wrapper").hide()
 		$("#ajax_loader").show()
 

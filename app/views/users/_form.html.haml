@@ -1,0 +1,16 @@
+/ %form.form-horizontal{:role => "form"}
+/ #form_box
+
+= form_for @user, :html => { :class => "form-inline{:role => 'form'}",  :id=> "new_user_form"} do |t|
+	=render "shared/error_messages", :target => @user
+	.form-group.col-sm-3
+		= t.label :username, class: "control-label"
+		= t.text_field :username, class: "form-control", placeholder: "username", required: true
+		= t.label :email, class: "control-label"
+		= t.text_field :email, class: "form-control", placeholder: "email", required: true
+		= t.label :password, class: "control-label"
+		= t.password_field :password, class: "form-control", placeholder: "password", required: true
+		= t.label :confirm, class: "control-label"
+		= t.password_field :password_confirmation, class: "form-control", placeholder: "confirm password", required: true
+		%br
+		= t.submit "create", class: " btn btn-primary"
