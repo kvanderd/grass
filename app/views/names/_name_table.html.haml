@@ -13,7 +13,7 @@
 			%tr 
 				%th Nicknames
 				%tr
-					%td= @name.alternative_versions
+					%td= @name.alternative_versions ? @name.alternative_versions : "no data available"
 	%h3.text-center Historical Population Data United States
 	%table.flat-table
 		%thead
@@ -23,10 +23,10 @@
 				%th Alive Population % 
 				%th Most Common Age
 				%tr.text-center
-					%td= "#{@name.historical_ratio} people are named #{@name.first_name}"
-					%td= "#{@name.historical_rank} most common name"
-					%td= "#{@name.historical_percent} named #{@name.first_name}"
-					%td= "#{@name.most_common_age} years old"
+					%td= "#{@name.historical_ratio} people are named #{@name.first_name}" ? @name.historical_ratio : "no data available"
+					%td= "#{@name.historical_rank} most common name" ? @name.historical_rank : "no data available"
+					%td= "#{@name.historical_percent} named #{@name.first_name}" ? @name.historical_percent : "no data available"
+					%td= "#{@name.most_common_age} years old" ? @name.most_common_age : "no data available"
 	%h3.text-center Birth Data 2012 -United States
 	%table.flat-table
 		%thead
@@ -35,9 +35,9 @@
 				%th Birth Percentage
 				%th Total Named in 2012
 				%tr.text-center
-					%td= "#{@name.birth_ratios} born in 2012 were named #{@name.first_name}"
-					%td= @name.birth_precentages
-					%td= "#{@name.births_yearly} people were named #{@name.first_name}"
+					%td= "#{@name.birth_ratios} born in 2012 were named #{@name.first_name}" ? @name.birth_ratios : "no data available"
+					%td= @name.birth_precentages ? @name.birth_precentages : "no data available"
+					%td= "#{@name.births_yearly} people were named #{@name.first_name}" ? @name.births_yearly : "no data available"
 
 
 	%h3.text-center Well Known People with Your Name (Global)
@@ -46,5 +46,5 @@
 			%tr 
 				%th Notable People
 				%tr.text-center
-					%td= @name.notable_people
+					%td= @name.notable_people ? @name.notable_people : "no data available"
 						
