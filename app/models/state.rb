@@ -1,3 +1,4 @@
 class State < ActiveRecord::Base
-	has_many :users
+	has_many :identities
+	has_many :users, through: :identities
 end

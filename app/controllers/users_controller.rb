@@ -14,7 +14,6 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-		@name = Name.find(@user.name_id)
 	end
 
 

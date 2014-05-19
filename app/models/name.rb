@@ -18,7 +18,8 @@
 #
 
 class Name < ActiveRecord::Base
-	has_many :users
+	has_many :identities
+	has_many :users, through: :identities
 	# validates_presence_of :name
 
 	def format_name(word, hash)

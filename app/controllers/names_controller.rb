@@ -22,6 +22,8 @@ require "call"
 			flash[:notice] = "We have no data for that name, please try a different name"
 			render :template => "home/new"
 		end
+		# Identity.create(name_id: @name.id, user_id: current_user.id) if current_user
+		current_user.name = @name if current_user
 	end
 
 	def state_data
@@ -39,5 +41,6 @@ require "call"
 	  def name_params
 	    params.require(:name).permit(:id, :name, :interpretation, :most_common_age, :alive_today, :etymology, :named_per_year)
 	  end
+
 
 end
