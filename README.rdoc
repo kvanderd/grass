@@ -1,4 +1,7 @@
-== README
+== Grass.io
 
-RoR App that pulls in data from api's and displays it with the HighchartsJS library for a rich data visualization experience. 
-Bootstrap framework and responsive design.
+Ruby on Rails app that pulls in data from the Wolfram Alpha API and displays it with the Highcharts.js library 
+creating a custom experience for each user. Data is also taken from www.data.gov and seeded into the database 
+using Ruby's CSV class. Ruby, Rails, Bootstrap, Sass, Haml, CSS3 animation, HighCharts.js and Postgresql.
+
+=== Live application: http://www.grass.io
